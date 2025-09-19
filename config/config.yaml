@@ -172,7 +172,7 @@ github-proxy: ""
 # proxy: "socks5://username:password@192.168.1.1:7890"
 proxy: ""
 # 符合条件节点数量的占比，低于此值会将订阅链接打印出来，用于排查质量差的订阅
-success-rate: 0
+success-rate: 0.4
 # 远程订阅清单地址；用于集中维护多个订阅链接，避免频繁修改本地文件
 # 支持两种格式：
 # 1) 纯文本：按行分隔，支持 # 注释与空行
@@ -230,3 +230,5 @@ sub-urls:
   - https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml
   - https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge.txt
   - https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/airport_sub_merge.txt
+  - https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt
+  - https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
