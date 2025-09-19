@@ -23,9 +23,9 @@ timeout: 5000
 # 测速地址(注意 并发数*节点速度<最大网速 否则测速结果不准确)
 # 尽量不要使用Speedtest，Cloudflare提供的下载链接，因为很多节点屏蔽测速网站
 # 如果找不到稳定的测速地址，可以自建测速地址
-speed-test-url: https://down2.178969.xyz/download/500MB.zip
+speed-test-url: https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7z
 # 最低测速结果舍弃(KB/s)
-min-speed: 512
+min-speed: 1024
 # 下载测试时间(s)(与下载链接大小相关，默认最大测试10s)
 download-timeout: 10
 # 单节点测速下载数据大小(MB)限制，0为不限
@@ -228,3 +228,5 @@ sub-urls:
   - https://raw.githubusercontent.com/mminngg/fetch-sub/refs/heads/main/valid_content_all.txt
   - https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
   - https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml
+  - https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge.txt
+  - https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/airport_sub_merge.txt
