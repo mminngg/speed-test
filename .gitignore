@@ -2,7 +2,6 @@ openipdb.ipdb
 config.yaml
 test
 node
-output/*
 subs-check*
 mihomo-check*
 
