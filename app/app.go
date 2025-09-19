@@ -244,7 +244,8 @@ func (app *App) checkProxies() error {
 
 	// 执行回调脚本
 	utils.ExecuteCallback(len(results))
-
+	//
+	os.Exit(0)
 	return nil
 }
 

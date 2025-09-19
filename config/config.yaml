@@ -225,4 +225,6 @@ sub-urls:
   # - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray.txt
   # - https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
 
-  - https://raw.githubusercontent.com/maimengmeng/mysub/refs/heads/main/valid_content_all.txt
+  - https://raw.githubusercontent.com/mminngg/fetch-sub/refs/heads/main/valid_content_all.txt
+  - https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
+  - https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml
