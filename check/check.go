@@ -9,7 +9,9 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"os/exec"
 	"regexp"
+	"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -161,6 +163,17 @@ func (pc *ProxyChecker) run(proxies []map[string]any) ([]Result, error) {
 	if config.GlobalConfig.SuccessLimit > 0 && pc.available >= config.GlobalConfig.SuccessLimit {
 		slog.Warn(fmt.Sprintf("达到节点数量限制: %d", config.GlobalConfig.SuccessLimit))
 	}
+
+	osName := runtime.GOOS
+	if osName == "linux" {
+		cmd := exec.Command("export", "PROXY_NODE_NUM="+strconv.Itoa(len(pc.results)))
+		output, err := cmd.Output()
+		if err != nil {
+			slog.Error(fmt.Sprintf("命令执行失败: %s", err.Error()))
+		}
+		slog.Info(fmt.Sprintf("命令输出:\n%s\n", output))
+	}
+
 	slog.Info(fmt.Sprintf("可用节点数量: %d", len(pc.results)))
 	slog.Info(fmt.Sprintf("测试总消耗流量: %.3fGB", float64(TotalBytes.Load())/1024/1024/1024))
 
