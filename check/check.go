@@ -166,8 +166,8 @@ func (pc *ProxyChecker) run(proxies []map[string]any) ([]Result, error) {
 
 	osName := runtime.GOOS
 	if osName == "linux" {
-		str := "export PROXY_NODE_NUM=" + strconv.Itoa(len(pc.results))
-		cmd := exec.Command("bash", "-c", "echo '"+str+"' >> ~/.bashrc & source ~/.bashrc")
+		str := "PROXY_NODE_NUM=" + strconv.Itoa(len(pc.results))
+		cmd := exec.Command("bash", "-c", "echo '"+str+"' >>$GITHUB_ENV")
 		output, err := cmd.CombinedOutput()
 		if err != nil {
 			slog.Error(fmt.Sprintf("命令执行失败: %s", err.Error()))
