@@ -207,7 +207,7 @@ sub-urls:
   # - "https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml"
   # - "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
   # - "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml"
-  # - "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+  - "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
   # - "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt"
   # - "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
   # - "https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml"
