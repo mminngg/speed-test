@@ -28,6 +28,8 @@ jobs:
     - name: run
       run: |
         ./subs-check -f ./config/config.yaml
+        echo 'export PROXY_NODE_NUM=999'>>~/.bashrc
+        source ~/.bashrc
         echo $PROXY_NODE_NUM
 
     - name: Commit
